@@ -1,0 +1,79 @@
+.main2 {
+    height: 100vh;
+}
+
+.cont2 {
+    background-color: #6fdfdf;
+    opacity: .92;
+    position: fixed;
+    width: 100%;
+    z-index: 900;
+}
+
+.form-back {
+    padding: 7rem 0 0 3rem;
+    text-align: left;
+
+}
+
+.back-btn {
+    color: azure;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.heading3 {
+    color: white;
+}
+
+.form-input {
+    text-align: left;
+    width: 35rem;
+    margin: 0 0 0 32%;
+    background-color: #4b7be5;
+    /* opacity: 0.9; */
+    padding: 2rem 2rem 0 2rem;
+    border-radius: 10px;
+}
+
+.i-head {
+    font-size: 26px;
+    color: aliceblue;
+    width: 12rem;
+    display: inline-block;
+    line-height: 2.5rem;
+}
+
+.i-fill {
+    font-size: 22px;
+    border: 2px grey;
+    background-color: white;
+    border-radius: 5px;
+    line-height: 2rem;
+    padding: 0 0 0 4px;
+    width: 22rem;
+}
+
+.sub-btn {
+    width: 50%;
+    height: 2.5em;
+    margin: 4% 0 6% 0%;
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(134, 241, 255);
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 0 0 0 0;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.sub-btn:hover {
+    background-color: rgb(114, 140, 255);
+    color: rgb(0, 0, 0);
+    transition: 300ms;
+    font-weight: 400;
+    cursor: pointer;
+}

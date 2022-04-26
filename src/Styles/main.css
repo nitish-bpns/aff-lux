@@ -1,0 +1,133 @@
+.App {
+    background-image: url(./../Images/bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.cont1 {
+    background-color: #6fdfdf;
+    opacity: .92;
+    position: fixed;
+    width: 100%;
+    z-index: 900;
+}
+
+.logo {
+    z-index: 999;
+    height: 75px;
+    width: auto;
+}
+
+.header1 {
+    color: white;
+    text-align: center;
+}
+
+.caro img {
+    width: 100vw !important;
+    margin: 4.7% 0 2% 0;
+    height: 47rem;
+}
+
+.outer {
+    margin-top: 1.5%;
+    width: 100%;
+    text-align: center;
+}
+
+.inner {
+    display: inline-block;
+}
+
+.Btn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(234, 234, 234);
+    padding: 9px 15px 8px 15px;
+    border-radius: 0px;
+    border: none;
+
+}
+
+.Btn:hover {
+    background-color: rgb(71, 214, 123) !important;
+}
+
+.Btn:active {
+    background-color: rgb(71, 214, 123) !important;
+    text-decoration: underline;
+}
+
+.Btn:focus {
+    background-color: rgb(71, 214, 123) !important;
+    text-decoration: underline;
+}
+
+.brand-box {
+    height: 63px;
+    background-color: rgb(203, 203, 203);
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+.Btn::before {
+    background-color: rgb(71, 214, 123) !important;
+    text-decoration: underline;
+}
+
+.brand-name {
+    text-align: center;
+    padding: 1% 0 0 0;
+}
+
+.items {
+    width: 24%;
+    margin: 1% 5px 2% 8px;
+    border: 3px black;
+    background-color: rgb(182, 225, 255);
+    height: 26.5rem;
+}
+
+/* .item-card {
+    border: 3px black;
+    background-color: rgb(182, 225, 255);
+    height: 28rem;
+    width: 25%;
+} */
+
+.item-image {
+    height: auto;
+    width: 95%;
+    padding-top: 8px;
+}
+
+.detail1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 4px 0 0 10px;
+    text-align: left;
+}
+
+.detail2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 0 10px;
+    text-align: left;
+}
+
+.Btn2 {
+    font-size: 20px;
+    padding: 3px 8px 2px 8px;
+    margin-top: 2%;
+    cursor: pointer;
+}
+
+.Btn2:hover {
+    background-color: rgb(133, 166, 224) !important;
+}
+
+.mainCont {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10% 0 10%;
+}
