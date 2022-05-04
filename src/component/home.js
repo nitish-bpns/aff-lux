@@ -250,19 +250,19 @@ function Home() {
             <center>
                 <Carousel responsive={responsiveNews}
                     className='caro'
-                    swipeable={true}
-                    draggable={false}
+                    // swipeable={true}
+                    // draggable={false}
                     showDots={true}
-                    ssr={true} // means to render carousel on server-side.
+                    // ssr={true} 
                     infinite={true}
-                    autoPlaySpeed={2000}
-                    keyBoardControl={true}
-                    customTransition="all .5"
+                    // autoPlaySpeed={5000}
+                    // keyBoardControl={true}
+                    // customTransition="all .5"
                     transitionDuration={2000}
-                    containerClass="carousel-container"
-                    removeArrowOnDeviceType={["mobile"]}
-                    dotListClass="custom-dot-list-style"
-                    itemClass="carousel-item-padding-40-px"
+                // containerClass="carousel-container"
+                // removeArrowOnDeviceType={["mobile"]}
+                // dotListClass="custom-dot-list-style"
+                // itemClass="carousel-item-padding-40-px"
                 // centerMode={true}
                 >
                     <img alt="cover1" src={c1} />

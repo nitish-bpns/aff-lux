@@ -8,14 +8,8 @@ import { useLocation } from 'react-router-dom'
 
 function Form() {
 
-    // const location = useLocation()
-    // const { from } = location.state
-
     const location = useLocation()
     const { itemLink } = location.state
-
-
-    // console.log(from);
 
     // const Contact = () => {
     const [userData, setUserData] = useState({
@@ -25,9 +19,7 @@ function Form() {
         age: "",
         address: "",
         itemLink: { itemLink },
-
     });
-
 
     let name, value;
     const postUserData = (event) => {
@@ -80,9 +72,7 @@ function Form() {
             }
         } else {
             alert(`Please fill the form.`);
-
         }
-
     };
 
 
