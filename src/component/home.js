@@ -8,6 +8,9 @@ import img1 from './../Images/logo.png';
 import c1 from './../Images/c1.jpeg';
 import c2 from './../Images/c2.jpeg';
 import c3 from './../Images/c3.jpeg';
+import { Container, Box, Button, ButtonBase } from "@material-ui/core";
+import { makeStyles, withStyles } from "@material-ui/styles";
+
 
 
 const responsiveNews = {
@@ -29,6 +32,48 @@ const responsiveNews = {
         items: 1,
     },
 };
+
+
+const StyledButton = withStyles(() => (
+    {
+
+        root: {
+            marginRight: "2rem",
+            width: "100%",
+            padding: "1rem 2rem 1rem 2rem",
+            fontSize: "1rem",
+            borderRadius: "0rem",
+            color: "black",
+            fontWeight: "400",
+            textTransform: "capitalize",
+            backgroundColor: "#6FDFDF",
+            border: "2.5px solid white",
+            borderRadius: "8px"
+        }
+    }))(ButtonBase);
+
+
+const useStyles = makeStyles(() => ({
+    buttonContainerWrapper: {
+        display: "flex",
+        justifyContent: "center"
+    },
+    buttonContainer: {
+        backgroundColor: "#ccc",
+        border: "1px solid #000",
+        padding: "1rem",
+        display: "flex",
+        justifyContent: "space-between"
+    },
+    lastButtonFilter: {
+        marginRight: "0rem"
+    },
+    activeButton: {
+        background: "#5534A5",
+        color: "#fff",
+        border: "2.5px solid white",
+    }
+}));
 
 
 function Home() {
@@ -163,31 +208,37 @@ function Home() {
     }
 
 
-
-
-
     const [Cloth, setCloth] = useState(clothData);
 
 
-    const handleCloth = () => {
+    const handleCloth = (e) => {
+
         setCloth(clothData);
+        setActiveButton("first");
     }
 
-    const handleAccess = () => {
+    const handleAccess = (e) => {
+
         setCloth(accessData);
+        setActiveButton("second");
     }
 
-    const handleBags = () => {
+    const handleBags = (e) => {
+
         setCloth(bagData);
+        setActiveButton("third");
+
     }
 
+    const classes = useStyles();
+    const [activeButton, setActiveButton] = useState('first');
 
 
     return (
-        <div className="App">
+        <div className="App" >
             <div className='cont1' >
                 <center>
-                    <img className='logo' src={img1} />
+                    <img className='logo' src={img1} alt="logo" />
                 </center>
             </div>
             {/* <div>
@@ -197,70 +248,98 @@ function Home() {
 
 
             <center>
-                <Carousel responsive={responsiveNews} className='caro' >
-                    <img src={c1} alt="news" />
-                    <img src={c3} alt="news" />
-                    <img src={c2} alt="news" />
+                <Carousel responsive={responsiveNews}
+                    className='caro'
+                    swipeable={true}
+                    draggable={false}
+                    showDots={true}
+                    ssr={true} // means to render carousel on server-side.
+                    infinite={true}
+                    autoPlaySpeed={2000}
+                    keyBoardControl={true}
+                    customTransition="all .5"
+                    transitionDuration={2000}
+                    containerClass="carousel-container"
+                    removeArrowOnDeviceType={["mobile"]}
+                    dotListClass="custom-dot-list-style"
+                    itemClass="carousel-item-padding-40-px"
+                // centerMode={true}
+                >
+                    <img alt="cover1" src={c1} />
+                    <img alt="cover2" src={c3} />
+                    <img alt="cover3" src={c2} />
 
                 </Carousel>
-            </center>
+            </center >
 
 
-
-            <div className="outer">
+            <div className='outer'>
                 <div className="inner">
-                    <button className="Btn" onClick={handleCloth} >Cloths</button>
+                    <StyledButton
+                        // className="btn-item"
+                        className={activeButton === "first" ? `${classes.activeButton}` : ""}
+                        onClick={handleCloth}
+
+                    >
+                        Cloths
+                    </StyledButton>
                 </div>
                 <div className="inner">
-                    <button className="Btn" onClick={handleAccess} >Accessories</button>
+                    <StyledButton
+                        className={activeButton === "second" ? `${classes.activeButton}` : ""}
+                        onClick={handleAccess} >
+                        Accessories
+                    </StyledButton>
                 </div>
                 <div className="inner">
-                    <button className="Btn" onClick={handleBags} >Bags</button>
+                    <StyledButton
+                        className={activeButton === "third" ? `${classes.activeButton}` : ""}
+                        onClick={handleBags} >
+                        Bags
+                    </StyledButton>
                 </div>
             </div>
 
+            {
+                Cloth && (Object.entries(Cloth).map(brand => {
+                    // console.log(item)
+                    return (
+                        <div>
+                            <div className='brand-box'>
+
+                                <h2 className='brand-name' >{brand[0]}</h2>
+
+                            </div>
+                            <div className='mainCont'>
+                                {brand[1].map(({ image, detail1, detail2 }) => (
 
 
-            {Cloth && (Object.entries(Cloth).map(brand => {
-                // console.log(item)
-                return (
-                    <div>
-                        <div className='brand-box'>
+                                    <div className='items'>
+                                        <div className='item-card'>
+                                            <center> <img className='item-image' alt='product'
+                                                src={image} />
+                                            </center>
+                                            <p className='detail1' >{detail1} </p>
+                                            <p className='detail2'  >{detail2} </p>
+                                            <center>
+                                                <Link to={{
+                                                    pathname: "/form",
+                                                }} state={{ itemLink: image }}><button className='btn btn2' >Rent Now</button></Link >
 
-                            <h2 className='brand-name' >{brand[0]}</h2>
+                                            </center>
 
+                                        </div>
+
+
+                                    </div>
+
+
+                                )
+                                )}     </div>;
                         </div>
-                        <div className='mainCont'>
-                            {brand[1].map(({ image, detail1, detail2 }) => (
-
-
-                                <container className='items'>
-                                    <card className='item-card'>
-                                        <center> <img className='item-image'
-                                            src={image} />
-                                        </center>
-                                        <p className='detail1'>{detail1} </p>
-                                        <p className='detail2'>{detail2} </p>
-                                        <center>
-
-                                            <Link to={{
-                                                pathname: "/form",
-                                                stat: { image }
-                                            }}>
-                                                <button className='Btn2' >Rent Now</button>
-                                            </Link>
-                                        </center>
-
-                                    </card>
-                                </container>
-
-                            )
-                            )}     </div>;
-                    </div>
-                )
-            }))}
-
-
+                    )
+                }))
+            }
 
             <br /><br />
         </div >
