@@ -8,7 +8,7 @@ import img1 from './../Images/logo.png';
 import c1 from './../Images/c1.jpeg';
 import c2 from './../Images/c2.jpeg';
 import c3 from './../Images/c3.jpeg';
-import { Container, Box, Button, ButtonBase } from "@material-ui/core";
+import { ButtonBase } from "@material-ui/core";
 import { makeStyles, withStyles } from "@material-ui/styles";
 
 
@@ -42,7 +42,7 @@ const StyledButton = withStyles(() => (
             width: "100%",
             padding: "1rem 2rem 1rem 2rem",
             fontSize: "1rem",
-            borderRadius: "0rem",
+            // borderRadius: "0rem",
             color: "black",
             fontWeight: "400",
             textTransform: "capitalize",
