@@ -267,11 +267,12 @@ function Home() {
                 // itemClass="carousel-item-padding-40-px"
                 // centerMode={true}
                 >
-                    <img alt="cover1" src={c1} />
+                    <img alt="cover5" src={c5} />
                     <img alt="cover2" src={c2} />
+                    <img alt="cover1" src={c1} />
                     <img alt="cover3" src={c3} />
-                    <img alt="cover3" src={c4} />
-                    <img alt="cover3" src={c5} />
+                    <img alt="cover4" src={c4} />
+
 
                 </Carousel>
             </center >
