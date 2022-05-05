@@ -97,6 +97,7 @@ function Form() {
                 <h2 className='heading3' >Please fill this form to send your request.</h2>
                 <br />
 
+
                 <form method="POST" className='form-input'>
                     <center> <img className='item-image-form' alt='product'
                         src={itemLink} />
@@ -172,6 +173,7 @@ function Form() {
                     </center>
 
                 </form>
+
                 <br />
                 <br />
 

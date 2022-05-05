@@ -174,3 +174,21 @@
 
 
 }
+
+@media(max-width:365px) {
+    .form-input {
+        text-align: left;
+        width: 15rem;
+        margin: 0 0 0 5%;
+    }
+
+    .i-fill {
+        font-size: 18px;
+        border: 2px grey;
+        background-color: white;
+        border-radius: 5px;
+        line-height: 1.8rem;
+        padding: 0 0 0 4px;
+        width: 15rem;
+    }
+}

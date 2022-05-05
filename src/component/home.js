@@ -5,9 +5,11 @@ import './../Styles/main.css';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import img1 from './../Images/logo.png';
-import c1 from './../Images/c1.jpeg';
-import c2 from './../Images/c2.jpeg';
-import c3 from './../Images/c3.jpeg';
+import c1 from './../Images/c1.png';
+import c2 from './../Images/c2.png';
+import c3 from './../Images/c3.png';
+import c4 from './../Images/c4.png';
+import c5 from './../Images/c5.png';
 import { ButtonBase } from "@material-ui/core";
 import { makeStyles, withStyles } from "@material-ui/styles";
 
@@ -40,14 +42,14 @@ const StyledButton = withStyles(() => (
         root: {
             marginRight: "2rem",
             width: "100%",
-            padding: "1rem 2rem 1rem 2rem",
+            padding: "0.8rem 2rem 0.8rem 2rem",
             fontSize: "1rem",
             // borderRadius: "0rem",
             color: "black",
             fontWeight: "400",
             textTransform: "capitalize",
             backgroundColor: "#6FDFDF",
-            border: "2.5px solid white",
+            border: "2px solid white",
             borderRadius: "8px"
         }
     }))(ButtonBase);
@@ -251,7 +253,7 @@ function Home() {
                 <Carousel responsive={responsiveNews}
                     className='caro'
                     // swipeable={true}
-                    // draggable={false}
+                    draggable={false}
                     showDots={true}
                     // ssr={true} 
                     infinite={true}
@@ -259,15 +261,17 @@ function Home() {
                     // keyBoardControl={true}
                     // customTransition="all .5"
                     transitionDuration={2000}
-                // containerClass="carousel-container"
-                // removeArrowOnDeviceType={["mobile"]}
+                    // containerClass="carousel-container"
+                    removeArrowOnDeviceType={["mobile"]}
                 // dotListClass="custom-dot-list-style"
                 // itemClass="carousel-item-padding-40-px"
                 // centerMode={true}
                 >
                     <img alt="cover1" src={c1} />
-                    <img alt="cover2" src={c3} />
-                    <img alt="cover3" src={c2} />
+                    <img alt="cover2" src={c2} />
+                    <img alt="cover3" src={c3} />
+                    <img alt="cover3" src={c4} />
+                    <img alt="cover3" src={c5} />
 
                 </Carousel>
             </center >
