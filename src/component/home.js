@@ -46,11 +46,13 @@ const StyledButton = withStyles(() => (
             fontSize: "1rem",
             // borderRadius: "0rem",
             color: "black",
-            fontWeight: "400",
+            fontWeight: "600",
             textTransform: "capitalize",
             backgroundColor: "#6FDFDF",
             border: "2px solid white",
-            borderRadius: "8px"
+            borderRadius: "5px",
+            fontFamily: "montserrat",
+            // letterSpacing: "1px"
         }
     }))(ButtonBase);
 
@@ -73,7 +75,7 @@ const useStyles = makeStyles(() => ({
     activeButton: {
         background: "#5534A5",
         color: "#fff",
-        border: "2.5px solid white",
+        border: "2.2px solid white",
     }
 }));
 
@@ -84,13 +86,13 @@ function Home() {
         Armani: [
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Armani%20Clothes%2F1.jpeg?alt=media&token=1f88bef5-e05e-471e-af9a-8800d924efd2",
-                detail1: "lorem1",
-                detail2: "lorem2"
+                detail1: "Stretch Viscose Jersey Dress",
+                detail2: "Rs.1200/day"
             },
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Armani%20Clothes%2F2.jpeg?alt=media&token=cee25e98-ba35-4e23-b024-056250da1937",
-                detail1: "2lorem1",
-                detail2: "2lorem2"
+                detail1: "Tulip-Print Cupro and Linen Blouson",
+                detail2: "Rs.2805/day"
             }
 
         ],
@@ -98,18 +100,18 @@ function Home() {
         Miscellaneous: [
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Other%20Clothes%2F1.jpeg?alt=media&token=68ace956-c4bf-4dd5-b29d-3c0284b3475a",
-                detail1: "lorem1",
-                detail2: "lorem2"
+                detail1: "Slim Fit Ripped Denim Jeans",
+                detail2: "Rs.849/day"
             },
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Other%20Clothes%2F2.jpeg?alt=media&token=187b6eb0-795e-4306-a6c6-fd276a26637e",
-                detail1: "2lorem1",
-                detail2: "2lorem2"
+                detail1: "Leopard Print Flannel Jacket",
+                detail2: "Rs.999/day"
             },
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Other%20Clothes%2F3.jpeg?alt=media&token=963ed99e-5b63-4e3c-b9ac-1ed5ff83c0d1",
-                detail1: "2lorem1",
-                detail2: "2lorem2"
+                detail1: "Sheath Dress In stretch Fabric",
+                detail2: "Rs.1450/day"
             }
         ],
 
@@ -119,65 +121,40 @@ function Home() {
         Gucci: [
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Gucci%20Bags%2F1.jpeg?alt=media&token=d5ef6f9b-24c5-4400-8485-d8cd985813c0",
-                detail1: "lorem1",
-                detail2: "lorem2"
+                detail1: "Leather Trimmed Monogrammed Coated",
+                detail2: "Rs.1,999/day"
             },
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Gucci%20Bags%2F2.jpeg?alt=media&token=5611ba70-6938-40ab-a6e7-655995d3650e",
-                detail1: "2lorem1",
-                detail2: "2lorem2"
+                detail1: "Gucci Diana mini Tote Bag",
+                detail2: "Rs.1,299/day"
             },
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Gucci%20Bags%2F3.jpeg?alt=media&token=fe2a8476-a38d-4088-b99b-6fd59f929e14",
-                detail1: "2lorem1",
-                detail2: "2lorem2"
+                detail1: "GG Black Briefcase",
+                detail2: "Rs.971/day"
             },
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Gucci%20Bags%2F4.jpeg?alt=media&token=586c1280-161b-45fa-878f-2788338dafde",
-                detail1: "2lorem1",
-                detail2: "2lorem2"
+                detail1: "Gucci Diana Web taille Bag",
+                detail2: "Rs.980/day"
             }
 
         ],
 
-        Brand2: [
-            {
-                image: "#",
-                detail1: "lorem1",
-                detail2: "lorem2"
-            },
-            {
-                image: "#",
-                detail1: "2lorem1",
-                detail2: "2lorem2"
-            }
-        ],
-
-        Miscellaneous: [
-            {
-                image: "#",
-                detail1: "lorem1",
-                detail2: "lorem2"
-            },
-            {
-                image: "#",
-                detail1: "2lorem1",
-                detail2: "2lorem2000"
-            }
-        ]
     };
 
     const accessData = {
         Chanel: [
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Chanel%20Watch%2F2.jpeg?alt=media&token=019d9a02-e6cb-4cf1-a99e-a7e82ed366c8",
-                detail1: "lorem1",
-                detail2: "lorem2"
+                detail1: "Monsieur Lion Edition Watch",
+                detail2: "Rs.72,390/day"
             },
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Chanel%20Watch%2F1.jpeg?alt=media&token=6c45f508-8433-4c60-9254-8f8e3608e9a7",
-                detail1: "2lorem1",
-                detail2: "2lorem2"
+                detail1: "J12 Watch Caliber",
+                detail2: "Rs.5,421/day"
             }
 
         ],
@@ -185,28 +162,16 @@ function Home() {
         Dolce: [
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Dolce%20and%20gabbana%20accessories%2F2.jpeg?alt=media&token=b566719d-84ad-4f79-adc6-1d58d665de00",
-                detail1: "lorem1",
-                detail2: "lorem2"
+                detail1: "DG Crossed Sunglasses",
+                detail2: "Rs.181/day"
             },
             {
                 image: "https://firebasestorage.googleapis.com/v0/b/afflux-4f4ae.appspot.com/o/Dolce%20and%20gabbana%20accessories%2F1.jpeg?alt=media&token=ca565b3c-ba4f-4950-9277-c63d9c8cab12",
-                detail1: "2lorem1",
-                detail2: "2lorem2"
+                detail1: "Jacquard Fabric Sandals with Geometric Heel",
+                detail2: "Rs.736/day"
             }
         ],
 
-        Miscellaneous: [
-            {
-                image: "#1",
-                detail1: "lorem1",
-                detail2: "lorem2"
-            },
-            {
-                image: "#2",
-                detail1: "2lorem1",
-                detail2: "2lorem2"
-            }
-        ]
     }
 
 
@@ -234,6 +199,10 @@ function Home() {
 
     const classes = useStyles();
     const [activeButton, setActiveButton] = useState('first');
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
 
     return (
@@ -329,7 +298,12 @@ function Home() {
                                             <center>
                                                 <Link to={{
                                                     pathname: "/form",
-                                                }} state={{ itemLink: image }}><button className='btn btn2' >Rent Now</button></Link >
+                                                }} state={{
+                                                    itemLink: image,
+                                                    itemDetail1: detail1,
+                                                    itemDetail2: detail2
+                                                }}>
+                                                    <button className='btn btn2' >Rent Now</button></Link >
 
                                             </center>
 
