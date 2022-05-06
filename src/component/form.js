@@ -141,7 +141,7 @@ function Form() {
                     style={customStyles}
                     contentLabel="Example Modal"
                 >
-                    <h2 ref={(_subtitle) => (subtitle = _subtitle)}></h2>
+
                     <Link to="/">
                         <button style={{ float: "right" }} onClick={closeModal}> X </button>
                     </Link>
