@@ -75,7 +75,7 @@ function Form() {
 
 
             const res = fetch(
-                "https://afflux-4f4ae-default-rtdb.firebaseio.com/userDataRecords.json",
+                "https://aff-lux-default-rtdb.firebaseio.com/userDataRecords.json",
                 {
                     method: "POST",
                     Headers: {
