@@ -48,13 +48,6 @@ function Form() {
 
 
 
-    const [item, setItem] = useState([]);
-    // const [item1, setItem1] = useState([]);
-    // const [item2, setItem2] = useState([]);
-
-
-
-
 
 
     const location = useLocation()
@@ -62,14 +55,28 @@ function Form() {
     // const itemDetail1 = location.state?.itemDetail1
     // const itemDetail2 = location.state?.itemDetail2
 
+    const [item, setItem] = useState(itemLink);
+    // const [item1, setItem1] = useState([]);
+    // const [item2, setItem2] = useState([]);
 
     useEffect(() => {
-        setItem(JSON.parse(window.localStorage.getItem(itemLink)));
+        localStorage.setItem('item', JSON.stringify(item));
+    }, [item]);
+
+    useEffect(() => {
+        const item = JSON.parse(localStorage.getItem('item'));
+        if (item) {
+            setItem(item);
+        }
     }, []);
 
-    useEffect(() => {
-        window.localStorage.setItem('itemLink', itemLink);
-    }, [itemLink]);
+    // useEffect(() => {
+    //     setItem(JSON.parse(window.localStorage.getItem(itemLink)));
+    // }, [itemLink]);
+
+    // useEffect(() => {
+    //     window.localStorage.setItem('itemLink', itemLink);
+    // }, [itemLink]);
 
 
 
@@ -91,12 +98,7 @@ function Form() {
     // }, [itemDetail2]);
 
 
-
-
-
-
-
-
+    console.log(item);
 
 
 
@@ -177,20 +179,24 @@ function Form() {
         <div className='main2' >
             <ScrollToTop smooth />
 
-            <div className='cont2' >
+            {/* <div className='cont2' >
                 <center>
                     <img className='logo' src={img1} alt="img" />
 
                 </center>
+            </div> */}
+
+
+
+
+            <div>
+                <img className='item-image-form' alt='product'
+                    src={itemLink} />
             </div>
-
-
-
-
-            <p>
-                {item}
-
-            </p>
+            <div>
+                <img className='item-image-form' alt='product'
+                    src={item} />
+            </div>
 
 
 
