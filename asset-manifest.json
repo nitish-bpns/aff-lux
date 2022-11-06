@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/aff-lux/static/css/main.c0783b72.css",
+    "main.js": "/aff-lux/static/js/main.5b66578e.js",
+    "static/js/787.1f4f6ee6.chunk.js": "/aff-lux/static/js/787.1f4f6ee6.chunk.js",
+    "static/media/bg6.png": "/aff-lux/static/media/bg6.9c0039e2181325942c03.png",
+    "static/media/c5.png": "/aff-lux/static/media/c5.62f8a3433667fe0ecaca.png",
+    "static/media/c1.png": "/aff-lux/static/media/c1.fe8d6c7eb1f81bae4980.png",
+    "static/media/c2.png": "/aff-lux/static/media/c2.84de8f5192b6cecb5b82.png",
+    "static/media/c4.png": "/aff-lux/static/media/c4.dc64c414854e5dcc6c01.png",
+    "static/media/c3.png": "/aff-lux/static/media/c3.317ad3fd074ae92e7dd6.png",
+    "static/media/logo.png": "/aff-lux/static/media/logo.abf325bbeed0e6b5a3ec.png",
+    "static/media/revicons.eot": "/aff-lux/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/aff-lux/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/aff-lux/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/aff-lux/index.html",
+    "main.c0783b72.css.map": "/aff-lux/static/css/main.c0783b72.css.map",
+    "main.5b66578e.js.map": "/aff-lux/static/js/main.5b66578e.js.map",
+    "787.1f4f6ee6.chunk.js.map": "/aff-lux/static/js/787.1f4f6ee6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0783b72.css",
+    "static/js/main.5b66578e.js"
+  ]
+}
