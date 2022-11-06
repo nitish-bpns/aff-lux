@@ -44,7 +44,12 @@ function Form() {
 
 
     const location = useLocation()
-    const { itemLink, itemDetail1, itemDetail2 } = location.state
+    const itemLink = location.state?.itemLink
+    const itemDetail1 = location.state?.itemDetail1
+    const itemDetail2 = location.state?.itemDetail2
+
+
+
 
     // const Contact = () => {
     const [userData, setUserData] = useState({

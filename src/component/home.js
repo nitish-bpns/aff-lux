@@ -297,11 +297,12 @@ function Home() {
                                             <center>
                                                 <Link to={{
                                                     pathname: "/form",
-                                                }} state={{
-                                                    itemLink: image,
-                                                    itemDetail1: detail1,
-                                                    itemDetail2: detail2
-                                                }}>
+                                                }}
+                                                    state={{
+                                                        itemLink: image,
+                                                        itemDetail1: detail1,
+                                                        itemDetail2: detail2
+                                                    }}>
                                                     <button className='btn btn2' >Rent Now</button></Link >
 
                                             </center>
