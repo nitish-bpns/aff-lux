@@ -1,11 +1,11 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import img1 from './../Images/logo.png';
+// import { Link } from 'react-router-dom';
+// import img1 from './../Images/logo.png';
 import './../Styles/form.css';
 import { useLocation } from 'react-router-dom'
 import ScrollToTop from "react-scroll-to-top";
-import Modal from 'react-modal';
+// import Modal from 'react-modal';
 
 
 
