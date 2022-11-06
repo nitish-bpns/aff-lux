@@ -7,7 +7,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
           {/* <ul className="App-header">
             <li>
@@ -18,7 +18,7 @@ class App extends Component {
             </li>
           </ul> */}
           <Routes>
-            <Route exact path='/' element={< Home />}></Route>
+            <Route exact path='/' element={<Home />}></Route>
             <Route exact path='/form' element={< Form />}></Route>
           </Routes>
         </div>
