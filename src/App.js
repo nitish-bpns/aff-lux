@@ -7,7 +7,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <div className="App">
           {/* <ul className="App-header">
             <li>
