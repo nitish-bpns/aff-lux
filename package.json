@@ -1,8 +1,7 @@
 {
   "name": "aff-lux",
   "version": "0.1.0",
-  "private": false,
-  "homepage": "http://nitish-bpns.github.io/aff-lux",
+  "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@testing-library/jest-dom": "^5.16.4",
