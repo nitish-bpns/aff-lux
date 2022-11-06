@@ -1,174 +1,121 @@
 
 import React, { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
-// import img1 from './../Images/logo.png';
+import { Link } from 'react-router-dom';
+import img1 from './../Images/logo.png';
 import './../Styles/form.css';
 import { useLocation } from 'react-router-dom'
 import ScrollToTop from "react-scroll-to-top";
-// import Modal from 'react-modal';
+import Modal from 'react-modal';
 
 
 
-// const customStyles = {
-//     content: {
-//         top: '50%',
-//         left: '50%',
-//         right: 'auto',
-//         bottom: 'auto',
-//         padding: '0px 15px 10px 15px',
-//         marginRight: '-50%',
-//         transform: 'translate(-50%, -50%)',
-//     },
-// };
+const customStyles = {
+    content: {
+        top: '50%',
+        left: '50%',
+        right: 'auto',
+        bottom: 'auto',
+        padding: '0px 15px 10px 15px',
+        marginRight: '-50%',
+        transform: 'translate(-50%, -50%)',
+    },
+};
 
 
 
 function Form() {
 
 
-    // let subtitle;
-    // const [modalIsOpen, setIsOpen] = React.useState(false);
+    let subtitle;
+    const [modalIsOpen, setIsOpen] = React.useState(false);
 
-    // function openModal() {
-    //     setIsOpen(true);
-    // }
+    function openModal() {
+        setIsOpen(true);
+    }
 
-    // function afterOpenModal() {
-    //     // references are now sync'd and can be accessed.
-    //     subtitle.style.color = '#f00';
-    // }
+    function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        subtitle.style.color = '#f00';
+    }
 
-    // function closeModal() {
-    //     setIsOpen(false);
-    // }
-
-
-
-
-
-
-
+    function closeModal() {
+        setIsOpen(false);
+    }
 
 
     const location = useLocation()
     const itemLink = location.state?.itemLink
-    // const itemDetail1 = location.state?.itemDetail1
-    // const itemDetail2 = location.state?.itemDetail2
+    const itemDetail1 = location.state?.itemDetail1
+    const itemDetail2 = location.state?.itemDetail2
 
-    const [item, setItem] = useState(itemLink);
-    // const [item1, setItem1] = useState([]);
-    // const [item2, setItem2] = useState([]);
 
-    useEffect(() => {
-        localStorage.setItem('item', JSON.stringify(item));
-    }, [item]);
 
-    useEffect(() => {
-        const item = JSON.parse(localStorage.getItem('item'));
-        if (item) {
-            setItem(item);
+    const [userData, setUserData] = useState({
+        userName: "",
+        email: "",
+        phone: "",
+        age: "",
+        address: "",
+
+    });
+
+    let name, value;
+    const postUserData = (event) => {
+        name = event.target.name;
+        value = event.target.value;
+
+        setUserData({ ...userData, [name]: value });
+    };
+
+
+
+    const submitData = async (event) => {
+        event.preventDefault();
+        const { userName, email, phone, age, address } = userData;
+
+        if (userName && email && phone && age && address) {
+
+
+            const res = fetch(
+                "https://aff-lux-default-rtdb.firebaseio.com/userDataRecords.json",
+                {
+                    method: "POST",
+                    Headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        userName,
+                        email,
+                        phone,
+                        age,
+                        address,
+                        itemLink,
+                        itemDetail1,
+                        itemDetail2
+
+                    }),
+                }
+            );
+
+            if (res) {
+                setUserData({
+                    userName: "",
+                    email: "",
+                    phone: "",
+                    age: "",
+                    address: "",
+                    itemLink: { itemLink, itemDetail1, itemDetail2 },
+                });
+                openModal()
+                    ;
+
+            } else {
+                alert(`Please fill the form.`);
+            }
+        } else {
+            alert(`Please fill the form.`);
         }
-    }, []);
-
-    // useEffect(() => {
-    //     setItem(JSON.parse(window.localStorage.getItem(itemLink)));
-    // }, [itemLink]);
-
-    // useEffect(() => {
-    //     window.localStorage.setItem('itemLink', itemLink);
-    // }, [itemLink]);
-
-
-
-    // useEffect(() => {
-    //     setItem1(JSON.parse(window.localStorage.getItem(itemDetail1)));
-    // }, []);
-
-    // useEffect(() => {
-    //     window.localStorage.setItem1('itemDetail1', itemDetail1);
-    // }, [itemDetail1]);
-
-
-    // useEffect(() => {
-    //     setItem2(JSON.parse(window.localStorage.getItem(itemDetail2)));
-    // }, []);
-
-    // useEffect(() => {
-    //     window.localStorage.setItem2('itemDetail2', itemDetail2);
-    // }, [itemDetail2]);
-
-
-    console.log(item);
-
-
-
-
-    // const [userData, setUserData] = useState({
-    //     userName: "",
-    //     email: "",
-    //     phone: "",
-    //     age: "",
-    //     address: "",
-
-    // });
-
-    // let name, value;
-    // const postUserData = (event) => {
-    //     name = event.target.name;
-    //     value = event.target.value;
-
-    //     setUserData({ ...userData, [name]: value });
-    // };
-
-
-
-    // const submitData = async (event) => {
-    //     event.preventDefault();
-    //     const { userName, email, phone, age, address } = userData;
-
-    //     if (userName && email && phone && age && address) {
-
-
-    //         const res = fetch(
-    //             "https://aff-lux-default-rtdb.firebaseio.com/userDataRecords.json",
-    //             {
-    //                 method: "POST",
-    //                 Headers: {
-    //                     "Content-Type": "application/json",
-    //                 },
-    //                 body: JSON.stringify({
-    //                     userName,
-    //                     email,
-    //                     phone,
-    //                     age,
-    //                     address,
-    //                     itemLink,
-    //                     itemDetail1,
-    //                     itemDetail2
-
-    //                 }),
-    //             }
-    //         );
-
-    //         if (res) {
-    //             setUserData({
-    //                 userName: "",
-    //                 email: "",
-    //                 phone: "",
-    //                 age: "",
-    //                 address: "",
-    //                 itemLink: { itemLink, itemDetail1, itemDetail2 },
-    //             });
-    //             openModal()
-    //                 ;
-
-    //         } else {
-    //             alert(`Please fill the form.`);
-    //         }
-    //     } else {
-    //         alert(`Please fill the form.`);
-    //     }
-    // };
+    };
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
@@ -179,30 +126,14 @@ function Form() {
         <div className='main2' >
             <ScrollToTop smooth />
 
-            {/* <div className='cont2' >
+            <div className='cont2' >
                 <center>
                     <img className='logo' src={img1} alt="img" />
 
                 </center>
-            </div> */}
-
-
-
-
-            <div>
-                <img className='item-image-form' alt='product'
-                    src={itemLink} />
-            </div>
-            <div>
-                <img className='item-image-form' alt='product'
-                    src={item} />
             </div>
 
 
-
-
-
-            {/* 
             <div>
                 <Modal
                     isOpen={modalIsOpen}
@@ -248,7 +179,7 @@ function Form() {
                             <span className="idetail2">
                                 {itemDetail2}
                             </span>
-                        </div> 
+                        </div>
                     </center>
 
 
@@ -336,7 +267,7 @@ function Form() {
                             className="sub-btn"
                             type='submit'
                             value="submit"
-  
+
                         ><b>Submit</b></button>
                     </center>
 
@@ -346,7 +277,7 @@ function Form() {
                 <br />
 
 
-            </div> */}
+            </div>
 
         </div >
     )
