@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/aff-lux/static/css/main.c0783b72.css",
-    "main.js": "/aff-lux/static/js/main.a63e4f6e.js",
+    "main.js": "/aff-lux/static/js/main.47289ac1.js",
     "static/js/787.1f4f6ee6.chunk.js": "/aff-lux/static/js/787.1f4f6ee6.chunk.js",
     "static/media/bg6.png": "/aff-lux/static/media/bg6.9c0039e2181325942c03.png",
     "static/media/c5.png": "/aff-lux/static/media/c5.62f8a3433667fe0ecaca.png",
@@ -15,11 +15,11 @@
     "static/media/revicons.woff": "/aff-lux/static/media/revicons.e8746a624ed098489406.woff",
     "index.html": "/aff-lux/index.html",
     "main.c0783b72.css.map": "/aff-lux/static/css/main.c0783b72.css.map",
-    "main.a63e4f6e.js.map": "/aff-lux/static/js/main.a63e4f6e.js.map",
+    "main.47289ac1.js.map": "/aff-lux/static/js/main.47289ac1.js.map",
     "787.1f4f6ee6.chunk.js.map": "/aff-lux/static/js/787.1f4f6ee6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c0783b72.css",
-    "static/js/main.a63e4f6e.js"
+    "static/js/main.47289ac1.js"
   ]
 }
